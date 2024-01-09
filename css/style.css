@@ -66,12 +66,12 @@ body{
 h1,h2,h3,h4 {
     color: var(--text-color);
     font-family: var(--second-font);
-    font-weight: var(--font-medium);
+    font-weight:bold;
     text-align: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 p{
-    padding: 1rem;
+    padding: .5rem;
 }
 ul{
     list-style: none;
@@ -108,12 +108,12 @@ section {
 }
 
 .sum{
-    padding: 3rem;
-    padding-top: 1rem;
+    padding: 1rem;
+    padding-top: .5rem;
 }
 p{
     line-height: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
 }
 
 /* ==========HEADER AND NAV============== */
@@ -198,47 +198,6 @@ p{
 /* ACTIVE LINK */
 /* ============= main============= */
 
-.background{
-    background-image: url("../image/fengmian.png");
-    background-size: cover;
-    margin-top: 3rem;
-    background-position: 50% 50%;
-    height: 200vh;
-    font: 900 39rem '';
-    line-height: 130vh;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-
-}
-
-.background::before{
-    content: '';
-    background-size: cover;
-    background-image: inherit;
-    background-position: 50% 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -99;
-}
-
-h2 .background__text{
-    position: absolute;
-    letter-spacing: 2px;
-    top: 120vh;
-    width: 60%;
-    color: #fff;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 30px;
-    background-color: rgba(0,0,0,0.3);
-}
-
 /* ========VEDIEO AND INTRO ============= */
 
 .focus{
@@ -256,10 +215,14 @@ h2 .background__text{
     margin: 10px;
 }
 
-
-.intro__container{
+.intro__data{
     padding-top: 3rem;
+    margin-bottom: 4rem;
+    padding: 5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.2);
 }
+
 
 .intro__title{
     margin-top: 1rem;
@@ -272,10 +235,110 @@ h2 .background__text{
     width: 100%;
 }
 
+
+
 /* 背景部分 */
 
 
 /* ========个案部分========== */
+.reason__part{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reason__container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.reason__container .box{
+    position: relative;
+    width: 394px;
+    height: 525px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.reason__container .box .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(525px at center 100px);
+    transition: .5s;
+}
+
+.reason__container .box:hover .imgbx{
+    clip-path: circle(80px at center 100px);
+}
+
+.reason__container .box:hover .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reason__content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.reason__content h2{
+    margin: 0;
+    padding: 0;
+}
+
+.reason__content a{
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    display: inline-block;
+}
+.reason__content a,
+.reason__content p,
+.reason__content h2{
+    opacity: 0;
+    transition: .5s;
+    transform: translateY(20px);
+}
+
+.reason__container .box:hover .reason__content h2 {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .3s;
+}
+
+.reason__container .box:hover .reason__content p {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .3s;
+}
+
+.reason__container .box:hover .reason__content a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .3s;
+}
+
 #gean{
     display: flex;
     align-items: center;
@@ -446,6 +509,11 @@ footer .container{
 .info__data p{
     color: #fff;
     font-size: 10px;
+}
+
+.background__title{
+    padding: 1rem;
+    margin-bottom: .5rem;
 }
 
 
